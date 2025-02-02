@@ -1,0 +1,85 @@
+**Employee Interface**
+
+Employee = {
+  name:string
+  lastname:string
+  password: string
+  email: string
+  phoneNumber: string
+  admin: boolean
+  authorizedStoreID: string[]
+  refreshToken:string
+  activeStatus: boolean
+  Create/Update_date: date
+}
+
+Services = {
+  name: string
+  description: string
+  appointement-type: string{}
+  service-categorie: string{}
+  price: string
+  duration: string
+}
+
+Roles = {
+  name: string
+  Create/Update_date: date
+
+}
+
+Dispos = {
+  start_date: date
+  end_date: date
+  Create/Update_date: date
+  Roles_ID: string
+  Services: []
+}
+
+Appointement = {
+  activeStatus: boolean
+  perm_creation_date: date
+  Create/Update_date: date
+  date: date
+  service: string
+  Roles_ID: string
+  from: string
+  name: string
+  lastname: string
+  email: string
+  phoneNumber: string
+  storeID: string
+}
+
+
+**Client Interface**
+
+Client = {
+  name:string
+  lastname:string
+  password: string
+  email: string
+  phoneNumber: string
+  refreshToken:string
+  Create/Update_date: date
+  favStoreID: string 
+  activeStatus:boolean
+}
+
+
+Store = {
+  storeNumber: string 
+  name: string
+  adress: string
+  city: string
+  country: string
+  phone: string
+  newServices: [services]
+  roles: [roles]
+  holiday: date[]
+  parameter: string
+  createNewService: boolean
+  perm_creation_date: date
+  Create/Update_date: date
+  activeStatus:boolean
+}

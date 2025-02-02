@@ -1,0 +1,35 @@
+1. Create an Employee Web Interface to manage appointement for différente pharmaceutical services.
+
+- It must have a Login for Employee and have 2 roles with différent Authorization: Admin, and Employee.
+  **ADMIN FEATURE**
+- Admin Must have a page where they can see all the actual services included in Priorx
+- They also should be able to create new services
+- Services must have: name, description, appointement-type, service-categorie, price, a duration.
+- Admin also need to have a page where they can define roles for their employee.
+- Then they can plan disponibilities for appointement for each roles, defining wich roles would do witch services.
+- Admin should have acces to the générale setting of the app and be able to define a few parameters: The amount of time between the time client take their appointement and the time they can start seeing dispos, holiday spécial opening hours,
+- Admin can view a log of the new online appointement and all the appointement taken by the employee.
+
+**Employee Feature**
+
+- Everybody must have acces to a page where they can take appointement based on the planned dispos of every roles
+- Everybody must be able to see in this page the appointement that were taken online
+- We want a notification system for new online appointement.
+
+2. Create a client Web Interface that will promote our services and allow client to take appointement
+
+- Have the option to create an account and login for custumer, but let them connect as an invitee.
+- Display and promote every service we offert
+- Have an interface for client to take an appointement
+
+**BOTH INSTANCE**
+
+- Keep in mind the possibility of expending to multiple succursale, each succursale must be able to configure if the can create new services or not.
+- Appointement need to have: firstame and lastname of the client, email adress and phone number for the client, the service and roles it is for, the date and time of the appointement the user that entered it (web if it comes from the web app), the timestamps that it was entered.
+
+3. Create a server that will manage the communication of both front-end site, and store all the data needed.
+
+- The server must manage the authentification of both the employee or the clients.
+- The server must manage the authorization of the Admin and Employee feature
+- The server must manage the concurrence between both front-end app(if an appointement was taken in one app, it must never be taken in the other app simultanously.)
+- The server must store all data for both web app in MongoDB, retriving it and routing it.
