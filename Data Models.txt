@@ -20,6 +20,8 @@ Services = {
   service-categorie: string{}
   price: string
   duration: string
+  baseServices: boolean
+  storeID?:string
 }
 
 Roles = {
@@ -74,12 +76,11 @@ Store = {
   city: string
   country: string
   phone: string
-  newServices: [services]
-  roles: [roles]
+  roles: string[]
   holiday: date[]
   parameter: string
   createNewService: boolean
+  activeStatus:boolean
   perm_creation_date: date
   Create/Update_date: date
-  activeStatus:boolean
 }

@@ -5,9 +5,9 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
-    "start": "nodemon ./src/server.js",
+    "start": "nodemon ./src/server.ts",
     "test": "jest"
   },
   "devDependencies": {
