@@ -26,6 +26,7 @@ Services = {
 
 Roles = {
   name: string
+  activeStatus: boolean
   Create/Update_date: date
 
 }
@@ -36,6 +37,7 @@ Dispos = {
   Create/Update_date: date
   Roles_ID: string
   Services: []
+  activeStatus: boolean
 }
 
 Appointement = {

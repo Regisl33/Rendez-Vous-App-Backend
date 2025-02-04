@@ -18,6 +18,10 @@ const dispoSchema = new mongoose.Schema(
       type: [mongoose.Schema.Types.ObjectId],
       ref: "Service",
     },
+    active: {
+      type: Boolean,
+      defaukt: true,
+    },
   },
   { timestamps: true }
 );
