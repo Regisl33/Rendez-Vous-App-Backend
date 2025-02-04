@@ -49,6 +49,10 @@ const appointementSchema = new mongoose.Schema(
       ref: "Service",
       require: true,
     },
+    clientID: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Client",
+    },
   },
   { timestamps: true }
 );

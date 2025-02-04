@@ -1,0 +1,4 @@
+Log all error to error file by month
+Log all query to a query file by day
+Log all mutation to a mutation file by day
+Log all succuessfull login and login error in a login file by month

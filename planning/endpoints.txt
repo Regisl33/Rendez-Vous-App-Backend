@@ -1,0 +1,38 @@
+Queries: 
+
+  - Get all Store (Client Front)
+  - Get Store by Id (Both)
+  - Get all Services (Both)
+  - Get service by Id (Both)
+  - Get role by Store (Employee Front)
+  - Get role by ID (Employee Front)
+  - Get all Employee (Employee Front)
+  - Get Employee by Store (Employee Front)
+  - Get Employee by ID (Employee Front)
+  - Get Dispo by Role/Date (Employee Front)
+  - Get All Client (Client Front)
+  - Get Client by ID (Client Front)
+  - Get Appointement By Client (Client Front)
+  - Get Appointement By Store/Role/Date (Employee Front)
+  - Get Appointement By ID (Employee Front)
+
+Mutation:
+  - Update Store Info (Admin Only)
+  - Create Service (Admin Only)
+  - Update Service (Admin Only)
+  - Create Role (Admin Only)
+  - Update Role (Admin Only)
+  - Delete Role (Admin Only)
+  - Create Employee (Admin Only)
+  - Update Employee (Admin Only)
+  - Create Dispo (Admin Only)
+  - Update Dispo (Admin Only)
+  - Delete Dispo (Admin Only)
+  - Create Employee (Client Front)
+  - Update Employee (Client Front)
+  - Create Appointement (Employee Front)
+  - Update Appointement (Employee Front)
+  - Delete Appointement (Employee Front)
+
+
+Client and Employee login and refresh routes
