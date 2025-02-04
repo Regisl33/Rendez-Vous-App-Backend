@@ -20,7 +20,7 @@ const dispoSchema = new mongoose.Schema(
     },
     active: {
       type: Boolean,
-      defaukt: true,
+      default: true,
     },
   },
   { timestamps: true }

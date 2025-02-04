@@ -32,19 +32,22 @@ const appointementSchema = new mongoose.Schema(
     },
     active: {
       type: Boolean,
-      defaukt: true,
+      default: true,
     },
     storeID: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Store",
+      require: true,
     },
     roleID: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Role",
+      require: true,
     },
     serviceID: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Service",
+      require: true,
     },
   },
   { timestamps: true }
