@@ -7,7 +7,6 @@ import { logType } from "../types/logType";
 import { NextFunction, Request, Response } from "express";
 
 export const logEvent = async (message: string, type: logType) => {
-  const today = format(new Date(), "yyyyMMdd");
   const dateTime = format(new Date(), "yyyyMMdd\tHH:mm:ss");
   const logItem = `${dateTime}\t${uuid()}\t${message}\n`;
 
@@ -15,22 +14,22 @@ export const logEvent = async (message: string, type: logType) => {
 
   switch (type) {
     case "error":
-      filename = `error${today.slice(0, 6)}.log`;
+      filename = `error${dateTime.slice(0, 6)}.log`;
       break;
     case "query":
-      filename = `query${today}.log`;
+      filename = `query${dateTime.slice(0, 8)}.log`;
       break;
     case "mutation":
-      filename = `mutation${today}.log`;
+      filename = `mutation${dateTime.slice(0, 8)}.log`;
       break;
     case "logSucces":
-      filename = `login${today.slice(0, 6)}.log`;
+      filename = `login${dateTime.slice(0, 6)}.log`;
       break;
     case "logError":
-      filename = `loginFailed${today.slice(0, 6)}.log`;
+      filename = `loginFailed${dateTime.slice(0, 6)}.log`;
       break;
     default:
-      filename = `error${today.slice(0, 6)}.log`;
+      filename = `error${dateTime.slice(0, 6)}.log`;
   }
 
   try {
