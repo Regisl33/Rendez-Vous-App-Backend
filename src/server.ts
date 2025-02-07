@@ -23,6 +23,8 @@ app.use(express.json());
 
 app.use(cookieParser());
 
+// app.use("/service", serviceRoute);
+
 app.all("*", (req, res) => {
   res.status(404).json({ message: "404 Not Found" });
 });

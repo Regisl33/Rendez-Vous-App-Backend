@@ -28,6 +28,7 @@ const serviceSchema = new mongoose.Schema(
     },
     baseService: {
       type: Boolean,
+      default: true,
     },
     storeID: {
       type: mongoose.Schema.Types.ObjectId,
