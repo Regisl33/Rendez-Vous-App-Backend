@@ -1,8 +1,8 @@
 import express from "express";
-import { createNewService } from "../controllers/servicesController";
+import * as ServiceControllers from "../controllers/servicesController";
 
 const router = express.Router();
 
-router.route("/").post(createNewService);
+router.route("/").post(ServiceControllers.createNewService);
 
 export default router;

@@ -1,5 +1,6 @@
-import { Request, Response } from "express";
+import { RequestHandler } from "express";
 import Service from "../models/service";
+import CustomStatusError from "../configs/customStatusError";
 
 type reqBodyType = {
   name: string;
@@ -10,7 +11,12 @@ type reqBodyType = {
   appointementCategorie: string;
 };
 
-export const createNewService = async (req: Request, res: Response) => {
+export const createNewService: RequestHandler<
+  unknown,
+  unknown,
+  reqBodyType,
+  unknown
+> = async (req, res, next) => {
   const {
     name,
     description,
@@ -18,39 +24,45 @@ export const createNewService = async (req: Request, res: Response) => {
     duration,
     appointementMethod,
     appointementCategorie,
-  }: reqBodyType = req.body;
+  } = req.body;
 
-  if (
-    !name ||
-    !description ||
-    !price ||
-    !duration ||
-    !appointementMethod ||
-    !appointementCategorie
-  )
-    return res.status(400).json({ message: "required data is missing" });
+  try {
+    if (
+      !name ||
+      !description ||
+      !price ||
+      !duration ||
+      !appointementMethod ||
+      !appointementCategorie
+    )
+      throw new CustomStatusError("required data is missing", 400);
 
-  const duplicate = await Service.findOne({ name }).lean().exec();
+    const duplicate = await Service.findOne({ name }).lean().exec();
 
-  if (duplicate)
-    return res
-      .status(409)
-      .json({ message: "A service with this name already exist" });
+    if (duplicate)
+      throw new CustomStatusError(
+        "A service with this name already exist",
+        409
+      );
 
-  const service = await Service.create({
-    name,
-    description,
-    price,
-    duration,
-    appointementMethod,
-    appointementCategorie,
-  });
+    const service = await Service.create({
+      name,
+      description,
+      price,
+      duration,
+      appointementMethod,
+      appointementCategorie,
+    });
 
-  if (service) {
-    return res.status(201).json({ message: "New service created", service });
-  } else {
-    return res
-      .status(400)
-      .json({ message: "couldn't create service, invalid data received" });
+    if (service) {
+      res.status(201).json(service);
+    } else {
+      throw new CustomStatusError(
+        "couldn't create service, invalid data received",
+        400
+      );
+    }
+  } catch (err) {
+    next(err);
   }
 };

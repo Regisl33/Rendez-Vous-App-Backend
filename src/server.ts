@@ -7,6 +7,7 @@ import corsOptions from "./configs/corsOptions";
 import logger, { logEvent } from "./middleware/logger";
 import errorhandler from "./middleware/errorhandler";
 import cookieParser from "cookie-parser";
+import serviceRouter from "./routes/serviceRoute";
 
 const app = express();
 const PORT = process.env.PORT || "3500";
@@ -23,7 +24,7 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-// app.use("/service", serviceRoute);
+app.use("/service", serviceRouter);
 
 app.all("*", (req, res) => {
   res.status(404).json({ message: "404 Not Found" });
