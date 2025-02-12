@@ -1,0 +1,4 @@
+20250211	21:31:29	cfa1e1d6-1116-4da0-82c3-1828bf69269c	341D0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1605:SSL alert number 80
+
+20250212	18:18:02	366e6e29-5251-48a5-9906-6cc1be8ac4bd	CustomStatusError: required data is missing	POST	/services	http://localhost:5173
+20250212	18:22:46	bcaccc8a-5349-4f77-9e11-0092ba78e9fd	CustomStatusError: required data is missing	POST	/services	http://localhost:5173
