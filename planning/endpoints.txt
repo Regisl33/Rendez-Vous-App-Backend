@@ -2,7 +2,8 @@ Queries:
 
   - Get all Store (Client Front)
   - Get Store by Id (Both)
-  - Get all Services (Both)
+  - Get all base Services (Both)
+  - Get Service by store
   - Get service by Id (Both)
   - Get role by Store (Employee Front)
   - Get role by ID (Employee Front)
@@ -18,7 +19,7 @@ Queries:
 
 Mutation:
   - Update Store Info (Admin Only)
-  - Create Service (Admin Only)
+  - Create Service (Admin Only) Check
   - Update Service (Admin Only)
   - Create Role (Admin Only)
   - Update Role (Admin Only)

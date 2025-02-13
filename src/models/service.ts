@@ -31,7 +31,7 @@ const serviceSchema = new mongoose.Schema(
       default: true,
     },
     storeID: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: [mongoose.Schema.Types.ObjectId],
       ref: "Store",
     },
   },
