@@ -1,4 +1,5 @@
 import mongoose, { InferSchemaType, model } from "mongoose";
+import Inc from "mongoose-sequence";
 
 const serviceSchema = new mongoose.Schema(
   {
@@ -37,6 +38,14 @@ const serviceSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+const AutoIncrement = Inc(mongoose as any) as any;
+
+serviceSchema.plugin(AutoIncrement, {
+  inc_field: "serviceID",
+  id: "serviceNum",
+  start_Seq: 1,
+});
 
 type service = InferSchemaType<typeof serviceSchema>;
 
