@@ -1,8 +1,12 @@
 import { RequestHandler } from "express";
 import Service from "../models/service";
 import CustomStatusError from "../configs/customStatusError";
-import ServiceType from "../types/ServiceType";
-import mongoose from "mongoose";
+import ServiceType, {
+  CreateReqBodyType,
+  ReqServParamType,
+  ReqStoreParamType,
+  UpdateReqBodyType,
+} from "../types/ServiceType";
 
 export const getServices: RequestHandler = async (req, res, next) => {
   try {
@@ -14,49 +18,29 @@ export const getServices: RequestHandler = async (req, res, next) => {
   }
 };
 
-type reqStoreParamType = {
-  currentStoreID: mongoose.Types.ObjectId;
-};
-
 export const getServicesByStore: RequestHandler<
-  reqStoreParamType,
+  ReqStoreParamType,
   unknown,
   unknown,
   unknown
 > = async (req, res, next) => {
   const { currentStoreID } = req.params;
-  const idFinder = (serviceArray: ServiceType[]): mongoose.Types.ObjectId[] => {
-    let tempArray = serviceArray.filter((serv) =>
-      serv.storeID?.includes(currentStoreID)
-    );
-    let storeActiveServiceID: mongoose.Types.ObjectId[] = [];
-    tempArray.map((serv) => storeActiveServiceID.push(serv._id));
-
-    return storeActiveServiceID;
-  };
   try {
     const services: ServiceType[] = await Service.find();
     const baseServices = services.filter((serv) => serv.baseService === true);
-    const storeActiveServiceID = idFinder(baseServices);
     const storeCustomServices = services
       .filter((serv) => serv.baseService === false)
       .filter((ser) => ser.storeID?.includes(currentStoreID));
     const storeServices = [...baseServices, ...storeCustomServices];
 
-    res
-      .status(200)
-      .json({ services: storeServices, activeIDs: storeActiveServiceID });
+    res.status(200).json(storeServices);
   } catch (err) {
     next(err);
   }
 };
 
-type reqServParamType = {
-  serviceID: mongoose.Types.ObjectId;
-};
-
 export const getServicesByID: RequestHandler<
-  reqServParamType,
+  ReqServParamType,
   unknown,
   unknown,
   unknown
@@ -72,19 +56,10 @@ export const getServicesByID: RequestHandler<
   }
 };
 
-type createReqBodyType = {
-  name: string;
-  description: string;
-  price: number;
-  duration: number;
-  appointementMethod: string;
-  appointementCategorie: string;
-};
-
 export const createNewService: RequestHandler<
   unknown,
   unknown,
-  createReqBodyType,
+  CreateReqBodyType,
   unknown
 > = async (req, res, next) => {
   const {
@@ -136,21 +111,11 @@ export const createNewService: RequestHandler<
     next(err);
   }
 };
-type updateReqBodyType = {
-  _id: mongoose.Types.ObjectId;
-  name: string;
-  description: string;
-  price: number;
-  duration: number;
-  appointementMethod: string;
-  appointementCategorie: string;
-  storeID?: mongoose.Types.ObjectId[];
-};
 
 export const updateNewService: RequestHandler<
   unknown,
   unknown,
-  updateReqBodyType,
+  UpdateReqBodyType,
   unknown
 > = async (req, res, next) => {
   const {
