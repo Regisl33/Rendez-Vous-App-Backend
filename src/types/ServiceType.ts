@@ -21,7 +21,7 @@ export type ReqStoreParamType = {
 };
 
 export type ReqServParamType = {
-  serviceID: mongoose.Types.ObjectId;
+  serviceID: string;
 };
 
 export type CreateReqBodyType = {

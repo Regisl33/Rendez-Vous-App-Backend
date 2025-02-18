@@ -2,3 +2,7 @@
 
 20250212	18:18:02	366e6e29-5251-48a5-9906-6cc1be8ac4bd	CustomStatusError: required data is missing	POST	/services	http://localhost:5173
 20250212	18:22:46	bcaccc8a-5349-4f77-9e11-0092ba78e9fd	CustomStatusError: required data is missing	POST	/services	http://localhost:5173
+20250217	22:39:42	4effa1db-2270-4ac3-b524-ac362034a34a	CastError: Cast to ObjectId failed for value ":4" (type string) at path "_id" for model "Service"	GET	/services/modif/:4	http://localhost:5173
+20250217	22:39:49	e86600ed-df53-484c-b61c-5776656d3657	CastError: Cast to ObjectId failed for value ":1" (type string) at path "_id" for model "Service"	GET	/services/modif/:1	http://localhost:5173
+20250217	22:43:07	6db79394-a4c7-4fb6-8884-5effb2ad4308	CastError: Cast to Number failed for value ":1" (type string) at path "id" for model "Service"	GET	/services/modif/:1	http://localhost:5173
+20250217	22:43:19	2d7ae140-3b1d-4a06-894a-d28c72b42d14	CastError: Cast to Number failed for value ":3" (type string) at path "id" for model "Service"	GET	/services/modif/:3	http://localhost:5173
