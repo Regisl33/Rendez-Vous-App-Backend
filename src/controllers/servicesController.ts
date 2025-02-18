@@ -33,7 +33,7 @@ export const getServicesByStore: RequestHandler<
       .filter((ser) => ser.storeID?.includes(currentStoreID));
     const storeServices = [...baseServices, ...storeCustomServices];
 
-    res.status(200).json({ services: storeServices });
+    res.status(200).json(storeServices);
   } catch (err) {
     next(err);
   }

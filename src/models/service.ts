@@ -42,7 +42,7 @@ const serviceSchema = new mongoose.Schema(
 const AutoIncrement = Inc(mongoose as any) as any;
 
 serviceSchema.plugin(AutoIncrement, {
-  inc_field: "serviceID",
+  inc_field: "id",
   id: "serviceNum",
   start_Seq: 1,
 });

@@ -10,6 +10,7 @@ type ServiceType = {
   appointementCategorie: " ";
   baseService: boolean;
   storeID?: mongoose.Types.ObjectId[];
+  id: number;
   createdAt: Date;
   updatedAt: Date;
   __v: number;
