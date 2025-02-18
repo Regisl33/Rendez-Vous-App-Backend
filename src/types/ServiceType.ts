@@ -1,4 +1,4 @@
-import mongoose, { Date, ObjectId } from "mongoose";
+import mongoose, { Date } from "mongoose";
 
 type ServiceType = {
   _id: mongoose.Types.ObjectId;
