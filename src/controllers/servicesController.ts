@@ -48,7 +48,7 @@ export const getServicesByID: RequestHandler<
   const { serviceID } = req.params;
 
   try {
-    const currentService = await Service.findOne({ _id: serviceID }).exec();
+    const currentService = await Service.findOne({ id: serviceID }).exec();
 
     res.status(200).json(currentService);
   } catch (err) {
