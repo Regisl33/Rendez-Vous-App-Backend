@@ -34,7 +34,7 @@ export type CreateReqBodyType = {
 };
 
 export type UpdateReqBodyType = {
-  _id: mongoose.Types.ObjectId;
+  id: number;
   name: string;
   description: string;
   price: number;

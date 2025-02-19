@@ -119,7 +119,7 @@ export const updateNewService: RequestHandler<
   unknown
 > = async (req, res, next) => {
   const {
-    _id,
+    id,
     name,
     description,
     price,
@@ -131,7 +131,7 @@ export const updateNewService: RequestHandler<
 
   try {
     if (
-      !_id ||
+      !id ||
       !name ||
       !description ||
       !price ||
@@ -141,13 +141,13 @@ export const updateNewService: RequestHandler<
     )
       throw new CustomStatusError("required data is missing", 400);
 
-    const service = await Service.findOne({ _id }).exec();
+    const service = await Service.findOne({ id }).exec();
 
     if (!service) throw new CustomStatusError("service not found", 400);
 
     const duplicate = await Service.findOne({ name }).exec();
 
-    if (duplicate && duplicate._id !== _id)
+    if (duplicate && duplicate.id !== id)
       throw new CustomStatusError(
         "A service with this name already exist",
         409
