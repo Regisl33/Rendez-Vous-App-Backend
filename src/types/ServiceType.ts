@@ -9,7 +9,7 @@ type ServiceType = {
   appointementMethod: "online" | "phone" | "none";
   appointementCategorie: " ";
   baseService: boolean;
-  storeID?: mongoose.Types.ObjectId[];
+  storeID?: string[];
   id: number;
   createdAt: Date;
   updatedAt: Date;
@@ -17,7 +17,7 @@ type ServiceType = {
 };
 
 export type ReqStoreParamType = {
-  currentStoreID: mongoose.Types.ObjectId;
+  currentStoreID: string;
 };
 
 export type ReqServParamType = {
@@ -41,7 +41,7 @@ export type UpdateReqBodyType = {
   duration: number;
   appointementMethod: string;
   appointementCategorie: string;
-  storeID?: mongoose.Types.ObjectId[];
+  storeID?: string[];
 };
 
 export default ServiceType;

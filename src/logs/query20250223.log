@@ -1,0 +1,16 @@
+20250223	20:19:32	826a8f25-99e5-4efb-9b4e-8b205934cce8	GET	/services/:1234	http://localhost:5173
+20250223	20:19:37	8e7ec680-91fe-46c1-a2f0-3212eb477c5b	GET	/services/modif/1	http://localhost:5173
+20250223	20:19:55	e5e72dbf-3804-42a8-99c8-2ef7dc917217	GET	/services/:1234	http://localhost:5173
+20250223	20:20:04	8bfc1d5b-8ded-4709-bceb-2971725d0bea	GET	/services/:1234	http://localhost:5173
+20250223	20:20:06	e3a5801f-9b9f-4080-95b4-7f60b7fb235e	GET	/services/modif/1	http://localhost:5173
+20250223	20:20:18	3a712cb1-e62d-472c-9315-22105a2c0d4d	GET	/services/:1234	http://localhost:5173
+20250223	20:20:20	ed58cc27-25fe-46dd-a1e9-98f9f2f5626b	GET	/services/modif/1	http://localhost:5173
+20250223	20:20:33	aa3466fa-aef2-44ad-8a5e-36c185bf0454	GET	/services/:1234	http://localhost:5173
+20250223	20:20:36	48652281-79aa-4cbe-a894-1b45ed6492b3	GET	/services/modif/1	http://localhost:5173
+20250223	20:23:50	2fb310cb-2f94-4c7b-a729-4d4892b87a50	GET	/services/modif/1	http://localhost:5173
+20250223	20:23:55	b4a800b2-36c3-45e1-a52b-b2d3a2c30781	GET	/services/:1234	http://localhost:5173
+20250223	20:23:56	5e523945-47b3-4ec7-8f0c-c53dddc3f8dc	GET	/services/:1234	http://localhost:5173
+20250223	20:23:57	4d8ef0ec-0557-4a84-b745-96dad6242c13	GET	/services/modif/1	http://localhost:5173
+20250223	20:24:04	cd2c2dc6-d098-42dd-988e-5c580be4194c	GET	/services/:1234	http://localhost:5173
+20250223	20:24:05	35676abb-de27-4b01-b82c-fafa8e322ac4	GET	/services/modif/1	http://localhost:5173
+20250223	20:24:12	e75b6f4a-ea8d-4fd1-a00b-5774ec32b4eb	GET	/services/:1234	http://localhost:5173

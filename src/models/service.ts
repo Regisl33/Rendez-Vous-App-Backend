@@ -32,7 +32,7 @@ const serviceSchema = new mongoose.Schema(
       default: true,
     },
     storeID: {
-      type: [mongoose.Schema.Types.ObjectId],
+      type: [String],
       ref: "Store",
     },
   },
