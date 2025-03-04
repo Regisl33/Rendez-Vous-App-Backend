@@ -1,4 +1,5 @@
 import mongoose, { InferSchemaType, model } from "mongoose";
+import Inc from "mongoose-sequence";
 
 const storeSchema = new mongoose.Schema(
   {
@@ -29,6 +30,10 @@ const storeSchema = new mongoose.Schema(
     roles: {
       type: [String],
     },
+    openingHours: {
+      type: String,
+      require: true,
+    },
     holidays: {
       type: [Date],
     },
@@ -44,13 +49,17 @@ const storeSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
-    creationDate: {
-      type: Date,
-      require: true,
-    },
   },
   { timestamps: true }
 );
+
+const AutoIncrement = Inc(mongoose as any) as any;
+
+storeSchema.plugin(AutoIncrement, {
+  inc_field: "id",
+  id: "storeNum",
+  start_Seq: 1,
+});
 
 type store = InferSchemaType<typeof storeSchema>;
 

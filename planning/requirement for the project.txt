@@ -2,9 +2,9 @@
 
 - It must have a Login for Employee and have 2 roles with différent Authorization: Admin, and Employee.
   **ADMIN FEATURE**
-- Admin Must have a page where they can see all the actual services included in Priorx
-- They also should be able to create new services
-- Services must have: name, description, appointement-type, service-categorie, price, a duration.
+////- Admin Must have a page where they can see all the actual services included in Priorx Checked
+////- They also should be able to create new services Checked
+////- Services must have: name, description, appointement-type, service-categorie, price, a duration. Checked
 - Admin also need to have a page where they can define roles for their employee.
 - Then they can plan disponibilities for appointement for each roles, defining wich roles would do witch services.
 - Admin should have acces to the générale setting of the app and be able to define a few parameters: The amount of time between the time client take their appointement and the time they can start seeing dispos, holiday spécial opening hours,

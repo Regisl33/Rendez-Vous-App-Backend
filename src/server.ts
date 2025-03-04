@@ -8,6 +8,7 @@ import logger, { logEvent } from "./middleware/logger";
 import errorhandler from "./middleware/errorhandler";
 import cookieParser from "cookie-parser";
 import serviceRouter from "./routes/serviceRoute";
+import storeRouter from "./routes/storeRoute";
 
 const app = express();
 const PORT = process.env.PORT || "3500";
@@ -25,6 +26,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/services", serviceRouter);
+app.use("/stores", storeRouter);
 
 app.all("*", (req, res) => {
   res.status(404).json({ message: "404 Not Found" });

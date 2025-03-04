@@ -72,6 +72,7 @@ Client = {
 
 
 Store = {
+  _id
   storeNumber: string 
   name: string
   adress: string
@@ -79,10 +80,10 @@ Store = {
   country: string
   phone: string
   roles: string[]
+  openingHours: 
   holiday: date[]
   parameter: string
   createNewService: boolean
   activeStatus:boolean
-  perm_creation_date: date
   Create/Update_date: date
 }
