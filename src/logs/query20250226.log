@@ -1,0 +1,5 @@
+20250226	22:08:27	c81c6f1b-bbd6-46e6-917d-f585b7daae5e	GET	/services/:1234	http://localhost:5173
+20250226	23:08:29	b1c1523a-0130-457f-ac5d-94a7ba645003	GET	/services/modif/1	http://localhost:5173
+20250226	23:11:00	bf7d8228-20bd-467f-85d5-2f284d90950d	GET	/services/:1234	http://localhost:5173
+20250226	23:11:48	8529dd25-f7b6-4933-8b92-ee7f3222a17d	GET	/services/modif/4	http://localhost:5173
+20250226	23:41:37	5ef31cd3-544c-45b6-95b6-4a73ae58def1	GET	/services/:1234	http://localhost:5173

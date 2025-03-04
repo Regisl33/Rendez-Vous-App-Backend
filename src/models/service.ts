@@ -33,7 +33,6 @@ const serviceSchema = new mongoose.Schema(
     },
     storeID: {
       type: [String],
-      ref: "Store",
     },
   },
   { timestamps: true }
