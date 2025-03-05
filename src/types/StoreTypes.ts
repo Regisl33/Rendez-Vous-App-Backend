@@ -1,13 +1,28 @@
 import mongoose, { Date } from "mongoose";
 import OpeningHoursType from "./OpeningHoursType";
 
+type country =
+  | "AB"
+  | "BC"
+  | "PE"
+  | "MB"
+  | "NB"
+  | "NS"
+  | "NU"
+  | "ON"
+  | "QC"
+  | "SK"
+  | "NL"
+  | "YT"
+  | "NT";
+
 type StoreType = {
   _id: mongoose.Types.ObjectId;
   storeNumber: string;
   storeName: string;
   storeAdress: string;
   storeCity: string;
-  storeCountry: string;
+  storeCountry: country;
   storePhone: string;
   roles?: string[];
   openingHours: OpeningHoursType;
@@ -26,7 +41,7 @@ export type CreateStoreReqType = {
   storeName: string;
   storeAdress: string;
   storeCity: string;
-  storeCountry: string;
+  storeCountry: country;
   storePhone: string;
   openingHours: OpeningHoursType;
 };
