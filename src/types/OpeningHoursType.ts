@@ -1,4 +1,4 @@
-type DayOptions =
+export type DayOptions =
   | 1
   | 2
   | 3
@@ -23,19 +23,24 @@ type DayOptions =
   | 22
   | 23
   | 0;
-type Day = {
+
+export type Weekdays =
+  | "Lundi"
+  | "Mardi"
+  | "Mercredi"
+  | "Jeudi"
+  | "Vendredi"
+  | "Samedi"
+  | "Dimanche";
+
+export type Day = {
+  pos: number;
+  day: Weekdays;
   open: DayOptions;
   close: DayOptions;
+  closed: boolean;
 };
 
-type OpeningHoursType = {
-  Sunday: Day;
-  Monday: Day;
-  Tuesday: Day;
-  Wednesday: Day;
-  Thursday: Day;
-  Friday: Day;
-  Saturday: Day;
-};
+export type OpeningHoursType = Day[];
 
 export default OpeningHoursType;
