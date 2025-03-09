@@ -48,7 +48,7 @@ export const createNewStore: RequestHandler<
       storeCity,
       storeCountry,
       storePhone,
-      openingHours,
+      openingHours: JSON.stringify(openingHours),
     });
 
     if (store) {

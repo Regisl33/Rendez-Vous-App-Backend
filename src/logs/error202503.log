@@ -3,3 +3,76 @@
 20250302	19:48:58	dc4882a4-12e8-4243-8b9c-e4565cc577f4	ValidationError: Service validation failed: storeID.0: Cast to [ObjectId] failed for value "[ '1234' ]" (type string) at path "storeID.0" because of "CastError"	PATCH	/services/:4	http://localhost:5173
 20250302	19:50:40	9a2307c8-a9cc-4711-819c-75c90498f19f	ValidationError: Service validation failed: storeID.0: Cast to [ObjectId] failed for value "[ '1234' ]" (type string) at path "storeID.0" because of "CastError"	PATCH	/services/:1	http://localhost:5173
 20250302	19:50:45	c66b0563-f4f0-4455-9883-266dc73c6dcc	ValidationError: Service validation failed: storeID.0: Cast to [ObjectId] failed for value "[ '1234' ]" (type string) at path "storeID.0" because of "CastError"	PATCH	/services/:2	http://localhost:5173
+20250308	12:10:12	4c9f7365-7200-4047-b771-839b49968de9	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	14:31:16	bacec542-9ed6-4ef2-bc5b-16d4a780ebbe	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	14:33:51	1910a33a-da19-4ba8-9040-178e603dbffa	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	14:33:53	9885d928-670f-4995-844e-2a11b7d935dd	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	14:34:02	43a39f7f-1f32-4211-8cdf-c112b7b06372	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	14:35:50	7f90de86-f154-415f-9fb5-0cf16e4f9802	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	14:37:50	486ba206-d900-4d98-93f5-180bf248ac52	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	15:28:44	aae7ae9d-b838-4005-aabb-b296f3257682	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	15:30:58	dcbf0003-c7ce-4b50-be6f-eae67143fac0	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	15:31:26	879daa8d-a4ba-4e42-af68-84e145e9ee13	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	15:32:56	4a57b831-18a5-40cc-8a08-8b35cb7819bb	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	15:35:25	70ef4570-e654-45b0-bb71-b676d2d9d4ce	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	15:41:35	1e700bfa-9399-4096-beda-92c3ab5ac681	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	15:44:13	cf868158-612a-4598-8253-0bc5470245ce	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	15:58:33	7a94cbfc-a8ec-4f1e-ba7e-045186cb0ff2	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	15:58:47	d9f6ba0a-728b-45ae-bd0c-d3b98ff6e21e	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	16:00:41	9f8dd365-0d50-4fe4-b7b9-49b5256599ba	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	16:03:41	64552951-f91b-43a2-8749-f94b7c53813d	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	16:04:23	e43efb1b-86b5-4f80-adb0-12f9eeab69df	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	16:04:34	7112dd68-2918-4e5b-b664-8dcff0d640d7	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	16:04:43	f9a01fba-8241-4273-ac4b-b6e764f94f90	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	16:04:57	6e122c84-6022-4d71-ba48-f83ed3402d76	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	20:46:55	5a3e4c90-a347-4bce-a35a-869c3914f76d	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	20:47:07	87c7b2d3-977a-4e65-937b-eb224df9a84f	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	20:51:30	c261cafa-0ed6-4c51-87c0-46f4ef729e27	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:01:59	87ea1aac-dd8d-491c-ac2f-bd79c66db7ff	ValidationError: Store validation failed: openingHours: Cast to string failed for value "[
+  { pos: 1, day: 'Dimanche', closed: true },
+  { pos: 2, day: 'Lundi', closed: false, open: 9, close: 16 },
+  { pos: 3, day: 'Mardi', closed: false, open: 9, close: 16 },
+  { pos: 4, day: 'Mercredi', closed: false, open: 9, close: 16 },
+  { pos: 5, day: 'Jeudi', closed: false, open: 9, close: 16 },
+  { pos: 6, day: 'Vendredi', closed: false, open: 9, close: 16 },
+  { pos: 7, day: 'Samedi', closed: true }
+]" (type Array) at path "openingHours"	POST	/stores	http://localhost:5173
+20250308	21:02:50	f04947e2-53cd-4b59-b0fd-edbda9ad073b	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:04:09	7e595b98-a0f9-43dd-85a1-f7b54779eb3e	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:04:15	84fb720c-d1c3-439b-a70f-01e24da14f5b	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:04:23	7f29c595-4ab8-4f19-8738-b9e271d25d3e	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:04:37	d58146a4-eb23-4368-a634-d0fc049e23c7	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:06:48	68223039-139c-47fa-8faf-a8ebbfe9cf74	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:07:29	4023ddda-0597-4161-8eb1-cdf5c9983c5e	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:07:45	9ce72f04-7174-4a1f-b7cb-63f4acd02596	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:09:48	b18d60ef-c603-4cd9-9e6a-374af3adced6	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:09:52	253dbb82-d4fe-4f88-a8b2-0442a4712bad	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:10:02	391aaa03-251a-4abc-bd44-6bf5b591c8b8	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:10:10	7d2b9776-1892-4226-8e4a-7986a9c4ebec	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:10:12	ee62ead9-d7ae-48be-aeb1-cacd637f05a7	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:10:19	db93d481-18a4-4d8d-852a-53e7c39e1840	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:10:24	b1b00432-57fc-48e2-b2ac-4c87430f5a2a	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:10:26	95bd2866-c199-40b2-a8d7-3c1597cc6fcc	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:10:31	e21866af-e5e6-4dd0-8680-1f4bf6e08438	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:10:33	586b48ac-c5c3-4909-9574-6ae869be067e	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:10:36	5dd6cb52-a97e-4883-bea9-9b77b118adf0	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:10:38	93d36845-6a23-45f4-83f0-c44cb9355bcf	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:11:53	a6825aae-d262-4a97-bfdd-d4a86fbc2bea	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250308	21:12:39	b5a9099e-072d-4493-a6c6-98f3b2524164	ValidationError: Store validation failed: openingHours: Cast to string failed for value "[
+  { pos: 1, day: 'Dimanche', closed: true },
+  { pos: 2, day: 'Lundi', closed: false, open: 9, close: 16 },
+  { pos: 3, day: 'Mardi', closed: false, open: 9, close: 16 },
+  { pos: 4, day: 'Mercredi', closed: false, open: 9, close: 16 },
+  { pos: 5, day: 'Jeudi', closed: false, open: 9, close: 16 },
+  { pos: 6, day: 'Vendredi', closed: false, open: 9, close: 16 },
+  { pos: 7, day: 'Samedi', open: 10, close: 16, closed: false }
+]" (type Array) at path "openingHours"	POST	/stores	http://localhost:5173
+20250308	21:19:00	df462c09-2d47-4dae-9ce9-c2425406e640	ValidationError: Store validation failed: openingHours: Cast to string failed for value "[
+  { pos: 1, day: 'Dimanche', closed: true },
+  { pos: 2, day: 'Lundi', closed: false, open: 9, close: 16 },
+  { pos: 3, day: 'Mardi', closed: false, open: 9, close: 16 },
+  { pos: 4, day: 'Mercredi', closed: false, open: 9, close: 16 },
+  { pos: 5, day: 'Jeudi', closed: false, open: 9, close: 16 },
+  { pos: 6, day: 'Vendredi', closed: false, open: 9, close: 16 },
+  { pos: 7, day: 'Samedi', open: 10, close: 16, closed: false }
+]" (type Array) at path "openingHours"	POST	/stores	http://localhost:5173
