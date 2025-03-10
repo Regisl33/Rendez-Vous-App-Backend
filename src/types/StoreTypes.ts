@@ -26,7 +26,7 @@ type StoreType = {
   storePhone: string;
   roles?: string[];
   openingHours: OpeningHoursType;
-  holiday?: Date[];
+  holiday?: string[];
   parameter: string;
   createNewService: boolean;
   active: boolean;
@@ -44,6 +44,22 @@ export type CreateStoreReqType = {
   storeCountry: country;
   storePhone: string;
   openingHours: OpeningHoursType;
+};
+
+export type updateStoreReqType = {
+  storeNumber: string;
+  storeName: string;
+  storeAdress: string;
+  storeCity: string;
+  storeCountry: country;
+  storePhone: string;
+  roles?: string[];
+  openingHours: OpeningHoursType;
+  holiday?: string[];
+  parameter: string;
+  createNewService: boolean;
+  active: boolean;
+  id: number;
 };
 
 export default StoreType;

@@ -35,7 +35,7 @@ const storeSchema = new mongoose.Schema(
       require: true,
     },
     holidays: {
-      type: [Date],
+      type: [String],
     },
     parameter: {
       type: String,
