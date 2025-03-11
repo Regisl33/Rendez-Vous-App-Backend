@@ -76,3 +76,19 @@
   { pos: 6, day: 'Vendredi', closed: false, open: 9, close: 16 },
   { pos: 7, day: 'Samedi', open: 10, close: 16, closed: false }
 ]" (type Array) at path "openingHours"	POST	/stores	http://localhost:5173
+20250309	22:41:28	1ab94c7c-10d4-4412-b712-976505e75662	6C390000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1586:SSL alert number 80
+
+20250309	23:05:11	65c28af4-0578-45a6-a808-f4284bbb6107	380A0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1586:SSL alert number 80
+
+20250310	21:58:00	81437bb1-bd77-4e47-a030-8ee0618b9f82	80270000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1586:SSL alert number 80
+
+20250310	22:49:51	843b0b49-e52f-4e2c-be0a-9c449a9c1a90	F41B0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1586:SSL alert number 80
+
+20250310	22:51:32	bfd51bae-8df3-47d1-bd28-d91106db6869	C0500000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1586:SSL alert number 80
+
+20250310	22:53:08	fcef598f-5bec-416c-8b5f-2c9f90e1a889	18210000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1586:SSL alert number 80
+
+20250310	22:54:29	d268b854-a78f-4d37-ae2a-7e7bf4815aac	C8240000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1586:SSL alert number 80
+
+20250310	22:56:30	cd986aca-8e39-4162-8885-e3d6d50335dd	30220000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1586:SSL alert number 80
+
