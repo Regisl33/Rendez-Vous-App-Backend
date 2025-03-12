@@ -12,6 +12,7 @@ export type color =
 type roleType = {
   _id: string;
   name: string;
+  store: string;
   color: color;
   active: boolean;
   id: number;
@@ -22,6 +23,7 @@ type roleType = {
 
 export type CreateRoleReqType = {
   name: string;
+  store: string;
   color: color;
 };
 
