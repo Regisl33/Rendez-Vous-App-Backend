@@ -1,6 +1,8 @@
 import { RequestHandler } from "express";
 import roleType from "../types/roleType";
 import Role from "../models/role";
+import { CreateRoleReqType, UpdateRoleReqType } from "../types/roleType";
+import CustomStatusError from "../configs/customStatusError";
 
 export const getRolesByStore: RequestHandler = async (req, res, next) => {
   const { currentStoreID } = req.params;
@@ -13,7 +15,7 @@ export const getRolesByStore: RequestHandler = async (req, res, next) => {
   }
 };
 
-export const getServicesByID: RequestHandler = async (req, res, next) => {
+export const getRoleByID: RequestHandler = async (req, res, next) => {
   const { roleID } = req.params;
   try {
     const currentRole = await Role.findOne({ id: roleID }).exec();
@@ -23,123 +25,85 @@ export const getServicesByID: RequestHandler = async (req, res, next) => {
   }
 };
 
-// export const createNewService: RequestHandler<
-//   unknown,
-//   unknown,
-//   CreateReqBodyType,
-//   unknown
-// > = async (req, res, next) => {
-//   const {
-//     name,
-//     description,
-//     price,
-//     duration,
-//     appointementMethod,
-//     appointementCategorie,
-//   } = req.body;
+export const createNewRole: RequestHandler<
+  unknown,
+  unknown,
+  CreateRoleReqType,
+  unknown
+> = async (req, res, next) => {
+  const { name, store, color } = req.body;
 
-//   try {
-//     if (
-//       !name ||
-//       !description ||
-//       !price ||
-//       !duration ||
-//       !appointementMethod ||
-//       !appointementCategorie
-//     )
-//       throw new CustomStatusError("required data is missing", 400);
+  try {
+    if (!name || !store || !color)
+      throw new CustomStatusError("required data is missing", 400);
 
-//     const duplicate = await Service.findOne({ name }).lean().exec();
+    const rolesArray = await Role.find();
+    const duplicate = rolesArray.filter(
+      (role) => role.store === store && role.name === name
+    );
 
-//     if (duplicate)
-//       throw new CustomStatusError(
-//         "A service with this name already exist",
-//         409
-//       );
+    if (duplicate.length > 0)
+      throw new CustomStatusError("A role with this name already exist", 409);
 
-//     const service = await Service.create({
-//       name,
-//       description,
-//       price,
-//       duration,
-//       appointementMethod,
-//       appointementCategorie,
-//     });
+    const role = await Role.create({
+      name,
+      store,
+      color,
+    });
 
-//     if (service) {
-//       res.status(201).json(service);
-//     } else {
-//       throw new CustomStatusError(
-//         "couldn't create service, invalid data received",
-//         400
-//       );
-//     }
-//   } catch (err) {
-//     next(err);
-//   }
-// };
+    if (role) {
+      res.status(201).json(role);
+    } else {
+      throw new CustomStatusError(
+        "couldn't create role, invalid data received",
+        400
+      );
+    }
+  } catch (err) {
+    next(err);
+  }
+};
 
-// export const updateNewService: RequestHandler<
-//   unknown,
-//   unknown,
-//   UpdateReqBodyType,
-//   unknown
-// > = async (req, res, next) => {
-//   const {
-//     id,
-//     name,
-//     description,
-//     price,
-//     duration,
-//     appointementMethod,
-//     appointementCategorie,
-//     storeID,
-//   } = req.body;
+export const updateRole: RequestHandler<
+  unknown,
+  unknown,
+  UpdateRoleReqType,
+  unknown
+> = async (req, res, next) => {
+  const { id, name, store, color, active } = req.body;
 
-//   try {
-//     if (
-//       !id ||
-//       !name ||
-//       !description ||
-//       !price ||
-//       !duration ||
-//       !appointementMethod ||
-//       !appointementCategorie
-//     )
-//       throw new CustomStatusError("required data is missing", 400);
+  try {
+    if (!id || !name || !store || !color || !active)
+      throw new CustomStatusError("required data is missing", 400);
 
-//     const service = await Service.findOne({ id }).exec();
+    const role = await Role.findOne({ id }).exec();
 
-//     if (!service) throw new CustomStatusError("service not found", 400);
+    if (!role) throw new CustomStatusError("service not found", 400);
 
-//     const duplicate = await Service.findOne({ name }).exec();
+    const rolesArray = await Role.find();
+    const duplicate = rolesArray.filter(
+      (role) => role.store === store && role.name === name
+    );
 
-//     if (duplicate && duplicate.id !== id)
-//       throw new CustomStatusError(
-//         "A service with this name already exist",
-//         409
-//       );
+    if (duplicate.length > 0 && duplicate[0].id !== id)
+      throw new CustomStatusError("A role with this name already exist", 409);
 
-//     service.name = name;
-//     service.description = description;
-//     service.price = price;
-//     service.duration = duration;
-//     service.appointementMethod = appointementMethod;
-//     service.appointementCategorie = appointementCategorie;
-//     service.appointementCategorie = appointementCategorie;
-//     storeID ? (service.storeID = storeID) : null;
+    role.name = name;
+    role.store = store;
+    role.color = color;
+    role.active = active;
 
-//     const updatedService = await service.save();
+    const updatedService = await role.save();
 
-//     if (updatedService) {
-//       res.status(201).json(updatedService);
-//     } else {
-//       throw new CustomStatusError(
-//         "couldn't create service, invalid data received",
-//         400
-//       );
-//     }
-//   } catch (err) {
-//     next(err);
-//   }
-// };
+    if (updatedService) {
+      res.status(201).json(updatedService);
+    } else {
+      throw new CustomStatusError(
+        "couldn't create service, invalid data received",
+        400
+      );
+    }
+  } catch (err) {
+    next(err);
+  }
+};
