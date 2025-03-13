@@ -28,7 +28,7 @@ app.use(cookieParser());
 
 app.use("/services", serviceRouter);
 app.use("/stores", storeRouter);
-app.use("/role", rolesRouter);
+app.use("/roles", rolesRouter);
 
 app.all("*", (req, res) => {
   res.status(404).json({ message: "404 Not Found" });
