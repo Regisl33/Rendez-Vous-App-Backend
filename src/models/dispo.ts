@@ -1,22 +1,26 @@
 import mongoose, { InferSchemaType, model } from "mongoose";
+import Inc from "mongoose-sequence";
 
 const dispoSchema = new mongoose.Schema(
   {
     startDate: {
-      type: Date,
+      type: Number,
       require: true,
     },
     endDate: {
-      type: Date,
+      type: Number,
       require: true,
     },
     roleID: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Role",
+      type: String,
+      require: true,
     },
     services: {
       type: [mongoose.Schema.Types.ObjectId],
       ref: "Service",
+    },
+    sequenceID: {
+      type: String,
     },
     active: {
       type: Boolean,
@@ -25,6 +29,14 @@ const dispoSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+const AutoIncrement = Inc(mongoose as any) as any;
+
+dispoSchema.plugin(AutoIncrement, {
+  inc_field: "id",
+  id: "dispoNum",
+  start_Seq: 1,
+});
 
 type dispo = InferSchemaType<typeof dispoSchema>;
 

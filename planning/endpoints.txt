@@ -11,6 +11,7 @@ Queries:
   - Get Employee by Store (Employee Front)
   - Get Employee by ID (Employee Front)
   - Get Dispo by Role/Date (Employee Front)
+  - Get Dispo by Store/Service/Date (Client Front)
   - Get All Client (Client Front)
   - Get Client by ID (Client Front)
   - Get Appointement By Client (Client Front)
