@@ -92,3 +92,26 @@
 
 20250310	22:56:30	cd986aca-8e39-4162-8885-e3d6d50335dd	30220000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1586:SSL alert number 80
 
+20250311	20:25:50	d4d78bf1-bf97-4e06-8808-5c4d6f531854	E44F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1605:SSL alert number 80
+
+20250311	20:35:23	df08733d-8c32-497d-a43a-c9b351fb6494	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	20:38:04	df194a7e-ab2e-4e75-9b5f-adacb6dec62f	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	20:38:54	b75357f4-1f14-4ee5-844d-d53c5e0f5ea7	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	20:45:39	7c77f680-b839-4801-bf79-fcf37e8db1c2	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	20:53:12	3011c4eb-d6ac-4ecc-8fae-78d07550e726	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	20:53:43	888412ca-957b-45a7-968f-b9ed52017b89	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	20:53:48	b6ef82d1-bcb2-451c-9e98-6f85fd427590	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	20:54:00	f84166d9-de4e-422a-a629-bd2daa0bd8a1	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	20:54:56	04cfc3e1-6c48-4abf-9333-ce2782c92cfe	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	20:55:44	2c2f2f1a-ae97-45d6-afa3-06b93692f4f1	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	20:57:11	1c06547f-cadd-4163-8ae5-24b0b90ed58f	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	20:57:54	6e5b3426-725b-437b-8a76-738fbd972209	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	21:02:11	011d8702-892b-40d6-b1a5-090f963a4f96	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	21:02:32	56b33c78-9436-4acd-bf66-2440fe3689fd	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	21:02:35	23824882-93cc-45a3-9b12-bb415b676547	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	21:03:07	aeb18ba3-9d60-4bfe-aa16-0450ae9e798c	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	21:03:10	80e90d05-c851-40b1-8927-e3fd7a7ac668	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	21:03:40	41f754cd-0865-4621-a217-8b5ebe07e5fd	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	21:04:51	2d3852bf-146b-45c1-ac0c-c71978dbd2dd	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	21:17:33	ea7d3e6c-b861-465c-9627-8d72a7c2c3c7	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250311	21:17:42	6aac9f06-3c8c-461d-9127-355c507ed702	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
