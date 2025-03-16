@@ -8,8 +8,11 @@ export const getRolesByStore: RequestHandler = async (req, res, next) => {
   const { currentStoreID } = req.params;
   try {
     const roles: roleType[] = await Role.find();
-    const storeRoles = roles.filter((role) => role.store === currentStoreID);
-    res.status(200).json(storeRoles);
+    const storeRoles = roles.filter(
+      (role) => role.store === currentStoreID.slice(1)
+    );
+    const activeStoreRoles = storeRoles.filter((role) => role.active === true);
+    res.status(200).json(activeStoreRoles);
   } catch (err) {
     next(err);
   }
