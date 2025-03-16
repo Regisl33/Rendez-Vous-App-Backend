@@ -24,7 +24,6 @@ type StoreType = {
   storeCity: string;
   storeCountry: country;
   storePhone: string;
-  roles?: string[];
   openingHours: OpeningHoursType;
   holiday?: string[];
   parameter: string;
@@ -53,7 +52,6 @@ export type updateStoreReqType = {
   storeCity: string;
   storeCountry: country;
   storePhone: string;
-  roles?: string[];
   openingHours: OpeningHoursType;
   holiday?: string[];
   parameter: string;

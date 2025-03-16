@@ -3,7 +3,6 @@ import CustomStatusError from "../configs/customStatusError";
 import Store from "../models/store";
 import { CreateStoreReqType, updateStoreReqType } from "../types/StoreTypes";
 import StoreType from "../types/StoreTypes";
-import { createNewService } from "./servicesController";
 
 export const getStores: RequestHandler = async (req, res, next) => {
   try {
@@ -102,7 +101,6 @@ export const updateStore: RequestHandler<
     storeCity,
     storeCountry,
     storePhone,
-    roles,
     openingHours,
     holiday,
     parameter,
@@ -145,7 +143,6 @@ export const updateStore: RequestHandler<
     store.storeCountry = storeCountry;
     store.storePhone = storePhone;
     store.openingHours = JSON.stringify(openingHours);
-    store.roles = roles ? roles : [];
     store.holidays = holiday ? holiday : [];
     store.parameter = parameter;
     store.createNewService = createNewService;

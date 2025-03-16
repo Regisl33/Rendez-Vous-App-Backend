@@ -115,3 +115,4 @@
 20250311	21:04:51	2d3852bf-146b-45c1-ac0c-c71978dbd2dd	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
 20250311	21:17:33	ea7d3e6c-b861-465c-9627-8d72a7c2c3c7	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
 20250311	21:17:42	6aac9f06-3c8c-461d-9127-355c507ed702	CustomStatusError: required data is missing	POST	/stores	http://localhost:5173
+20250315	21:45:27	e49f8278-6ef3-4b28-bb9a-306c79159396	CustomStatusError: A role with this name already exist	POST	/roles	http://localhost:5173

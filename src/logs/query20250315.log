@@ -1,0 +1,13 @@
+20250315	21:36:05	d3006baa-13dd-4be9-af1f-231d74e0b9cb	GET	/roles/:1234	http://localhost:5173
+20250315	21:41:40	d14424f0-f7e4-4a5d-959a-43ea4e63ba49	GET	/roles/:1234	http://localhost:5173
+20250315	21:45:27	08c2e234-fdfb-41b5-aec6-8e4780d8b155	GET	/roles/:1234	http://localhost:5173
+20250315	21:46:12	0c772741-16e4-4ba4-8426-f704ea5edbf1	GET	/roles/:1234	http://localhost:5173
+20250315	21:49:46	c5059937-61c4-4552-ab3a-1dca6ef788b7	GET	/roles/:1234	http://localhost:5173
+20250315	21:52:16	ed813628-74d6-4573-a5c8-17802d907f4d	GET	/roles/:1234	http://localhost:5173
+20250315	21:57:35	b40a2138-cba8-4447-9a35-ba0974837ebc	GET	/roles/:1234	http://localhost:5173
+20250315	21:59:40	eb4b8808-9142-4527-ab34-0b0eeb671199	GET	/roles/:1234	http://localhost:5173
+20250315	23:01:20	86d0b902-a2f5-49b3-9908-b1b0c0255de0	GET	/roles/:1234	http://localhost:5173
+20250315	23:03:41	3701ae4c-4af9-4ec2-ab50-3f7f0b638557	GET	/roles/:1234	http://localhost:5173
+20250315	23:03:55	19a81e2d-099b-476d-ac48-68d4bd7fa288	GET	/roles/:1234	http://localhost:5173
+20250315	23:03:59	c13f7e2a-b6c1-4017-82dd-2f5c65e13f3c	GET	/roles/:1234	http://localhost:5173
+20250315	23:10:22	2a1e54ca-02cf-47a4-9f51-847e544042cd	GET	/roles/modif/1	http://localhost:5173

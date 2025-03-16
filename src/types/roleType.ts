@@ -26,5 +26,12 @@ export type CreateRoleReqType = {
   store: string;
   color: color;
 };
+export type UpdateRoleReqType = {
+  name: string;
+  store: string;
+  color: color;
+  active: boolean;
+  id: number;
+};
 
 export default roleType;

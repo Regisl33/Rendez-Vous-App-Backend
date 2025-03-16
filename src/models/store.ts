@@ -27,9 +27,6 @@ const storeSchema = new mongoose.Schema(
       type: String,
       require: true,
     },
-    roles: {
-      type: [String],
-    },
     openingHours: {
       type: String,
       require: true,

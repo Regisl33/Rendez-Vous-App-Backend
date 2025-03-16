@@ -27,7 +27,7 @@ const AutoIncrement = Inc(mongoose as any) as any;
 
 roleSchema.plugin(AutoIncrement, {
   inc_field: "id",
-  id: "serviceNum",
+  id: "roleNum",
   start_Seq: 1,
 });
 
