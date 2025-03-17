@@ -10,6 +10,7 @@ import cookieParser from "cookie-parser";
 import serviceRouter from "./routes/serviceRoute";
 import storeRouter from "./routes/storeRoute";
 import rolesRouter from "./routes/roleRoute";
+import disposRouter from "./routes/dispoRoute";
 
 const app = express();
 const PORT = process.env.PORT || "3500";
@@ -29,6 +30,7 @@ app.use(cookieParser());
 app.use("/services", serviceRouter);
 app.use("/stores", storeRouter);
 app.use("/roles", rolesRouter);
+app.use("/dispos", disposRouter);
 
 app.all("*", (req, res) => {
   res.status(404).json({ message: "404 Not Found" });

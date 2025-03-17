@@ -71,29 +71,19 @@ export const createNewDispo: RequestHandler<
             409
           );
 
-        requestArray.push(req)
-      })
+        requestArray.push({ ...req, sequenceID });
+      });
 
+      const dispos = await Dispo.insertMany(requestArray);
 
-
-
-
-        const dispo = await Dispo.create({
-          startDate,
-          endDate,
-          roleID,
-          services,
-        });
-
-        if (dispo) {
-          res.status(201).json(dispo);
-        } else {
-          throw new CustomStatusError(
-            "couldn't create dispo, invalid data received",
-            400
-          );
-        }
-      };
+      if (dispos) {
+        res.status(201).json(dispos);
+      } else {
+        throw new CustomStatusError(
+          "couldn't create dispo, invalid data received",
+          400
+        );
+      }
     }
   } catch (err) {
     next(err);

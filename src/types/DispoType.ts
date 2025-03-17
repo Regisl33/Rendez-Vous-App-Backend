@@ -17,6 +17,7 @@ export type CreateDispoReqType = {
   endDate: number;
   roleID: string;
   services: string[];
+  sequenceID?: string;
 };
 
 export type updateDispoType = {
